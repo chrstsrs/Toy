@@ -2,6 +2,44 @@
 # Toy Store
 
 This flask application demonstrates a simple application of an online toy store. 
+## Run Locally
+
+Clone the project
+
+```bash
+  git clone https://github.com/chrstsrs/Toy.git
+```
+
+Go to the project directory
+
+```bash
+  cd Toy
+```
+
+Build Docker images
+
+```bash
+  docker-compose build
+```
+
+Start the server
+
+```bash
+  docker-compose up
+```
+
+Stop the server
+
+```bash
+  ^C
+```
+
+Remove the containers
+
+```bash
+  docker-compose down -v
+```
+
 ## Swagger Reference
 There is a swagger reference in the 
 http://127.0.0.1:5000//swagger-ui
@@ -71,6 +109,11 @@ Deletes a toy.
 | :-------- | :------- | :------------------------- |
 | `id` | `ineger` | **Required**. The toy's id |
 
+
+
+## Assumption
+
+The name is set as unique and not null. As I understand, the user will request a particular toy, with a user-friendly name. The users can not deal with numbers easily, as product codes. To avoid confusion I set the name as unique and not null. 
 
 
 ## Author
